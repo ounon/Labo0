@@ -10,22 +10,6 @@ import java.util.Set;
 
 public class CsvSerializer implements ISerializer{
     
-    public void header(IData data, PrintWriter pw){
-         Set listKeys = data.getMap().keySet();  // Obtenir la liste des clés
-    		Iterator iterator = listKeys.iterator();
-    		// Parcourir les clés et afficher les entrées de chaque clé;
-    		while(iterator.hasNext())
-    		{
-    			Object key = iterator.next();
-                        if (!iterator.hasNext())
-                            pw.println(key);
-                        else
-                            pw.print (key + ",");
-    		}
- 
-    }
-    
-    
     public void serialize(IData data, PrintWriter pw){
         
         Set listKeys = data.getMap().keySet();  // get key list
